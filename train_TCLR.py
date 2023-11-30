@@ -361,7 +361,7 @@ if __name__ == '__main__':
     parser.add_argument("--run_id", dest='run_id', type=str, required=False, default= "video_cls",
                         help='run_id')
     parser.add_argument("--restart", action='store_true')
-    parser.add_argument("--saved_model", dest='saved_model', type=str, required=False, default= "./Pretrained/TCLR.pth",
+    parser.add_argument("--saved_model", dest='saved_model', type=str, required=False, default= "./data/Pretrained/TCLR.pth",
                         help='run_id')
     parser.add_argument("--linear", action='store_true')
     # print()
