@@ -1,0 +1,7 @@
+{
+"classes":{
+    "presence"	 :	1	,
+    "absence"	 :	2	,
+    "none"	 :	3
+}
+}
