@@ -9,9 +9,10 @@ conda env create -f BAT.yml
 conda activate BAT
 ```
 ## Train
-cd BAT
 
 ```
+cd BAT
+
 # to train the model by BAT:
 python train_BAT.py --BAT
 
