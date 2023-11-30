@@ -59,7 +59,6 @@ def build_r3d_classifier(num_classes = 4, kin_pretrained = False, self_pretraine
             # if linear == True:
             #     model.layer_name.requires_grad = False
         model.load_state_dict(model_kvpair, strict=True)
-        print(f'model {saved_model_file} loaded successsfully!')
     # exit()
 
     model.fc = nn.Linear(512, num_classes)
@@ -87,7 +86,6 @@ def load_r3d_classifier(num_classes = 4, saved_model_file = None):
        
         model_kvpair[layer_name] = weights   
     model.load_state_dict(model_kvpair, strict=True)
-    print(f'model {saved_model_file} loaded successsfully!')
     return model 
 
 
@@ -107,6 +105,5 @@ if __name__ == '__main__':
     
     # summary(model, (16, 3, 112, 112))
     input = torch.rand(5, 3, 16, 112, 112).cuda()
-    model = build_r3d_classifier(num_classes = 102, saved_model_file = '/home/c3-0/ishan/ss_saved_models/r3d82/model_best_e151_loss_0.9281.pth')
 
   

@@ -153,20 +153,16 @@ def train_classifier(run_id, restart, saved_model, linear):
         else:
             print(f'No such model exists: {saved_model_file} :(')
             if not (saved_model == None or len(saved_model) == 0 or saved_model =="kin400"):
-    
-                print(f'Trying to load {saved_model}')
+
                 model = build_r3d_classifier(saved_model_file = saved_model, num_classes = 4)
             else:
-                print(f'It`s a baseline experiment!')
                 model = build_r3d_classifier(self_pretrained = False, saved_model_file = None, num_classes = 4)
             epoch0 = 0
 
     else:
         if not (saved_model == None or len(saved_model) == 0 or saved_model =="kin400"):
-            print(f'Trying to load {saved_model}')
             model = build_r3d_classifier(saved_model_file = saved_model, num_classes = 4)
         else:
-            print(f'It`s a baseline experiment!')
             model = build_r3d_classifier(self_pretrained = False, saved_model_file = None, num_classes = 4)
         epoch0 = 0
         '''if not (saved_model == None or saved_model ==''):
