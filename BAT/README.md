@@ -14,7 +14,7 @@ conda activate BAT
 cd BAT
 
 # to train the model by BAT:
-python train_BAT.py --BAT
+python train_BAT.py
 
 # to train the model by TCLR:
-python train_TCLR.py --TCLR
+python train_TCLR.py
